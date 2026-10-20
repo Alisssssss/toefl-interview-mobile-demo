@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="TOEFL Speaking Interview mobile practice demo">
+  <title>Speak 40 · TOEFL Interview Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main id="app">
+    <section id="homeView" class="view home-view" aria-labelledby="homeTitle">
+      <header class="masthead">
+        <div class="brand-mark" aria-hidden="true">40</div>
+        <div>
+          <p class="eyebrow">TOEFL SPEAKING · INTERVIEW</p>
+          <h1 id="homeTitle">Speak<br><em>out loud.</em></h1>
+        </div>
+        <button id="aboutButton" class="icon-button" type="button" aria-label="查看使用提示">?</button>
+      </header>
+
+      <section class="progress-panel" aria-label="训练进度">
+        <div>
+          <span class="progress-kicker">YOUR PRACTICE</span>
+          <strong id="totalAnswers">0</strong>
+          <span>次录音回答</span>
+        </div>
+        <div class="progress-stat">
+          <strong id="completedSets">0</strong><span>/ 40</span>
+          <small>完成一轮</small>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <h2>Choose a set</h2>
+        <span>录满4题，色块加深一阶</span>
+      </div>
+
+      <div id="setGrid" class="set-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="practiceView" class="view practice-view" hidden aria-labelledby="practiceTitle">
+      <nav class="practice-nav">
+        <button id="backButton" class="back-button" type="button" aria-label="返回全部套题">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+        </button>
+        <div class="practice-identity">
+          <span id="practiceSetId">Z001</span>
+          <strong id="practiceTitle">Health</strong>
+        </div>
+        <span id="setRoundBadge" class="round-badge">第 1 轮</span>
+      </nav>
+
+      <section class="scenario-panel">
+        <span class="scenario-label">SCENARIO</span>
+        <p id="scenarioText"></p>
+        <div class="swipe-up-hint" aria-hidden="true">
+          <span></span>
+          向上滑进入题目
+        </div>
+      </section>
+
+      <section class="question-zone" aria-label="四道口语题">
+        <div class="question-toolbar">
+          <span>QUESTIONS</span>
+          <div id="questionDots" class="question-dots" aria-label="题目导航"></div>
+        </div>
+        <div id="questionTrack" class="question-track"></div>
+        <p class="swipe-left-hint">向左滑动进入下一题 <span>→</span></p>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="aboutDialog" class="about-dialog">
+    <button id="closeAbout" class="dialog-close" type="button" aria-label="关闭">×</button>
+    <p class="eyebrow">HOW IT WORKS</p>
+    <h2>用声音留下进度</h2>
+    <ol>
+      <li>选择一套题，先阅读并向上滑过场景。</li>
+      <li>每题点击录音，最长45秒；向左滑切换下一题。</li>
+      <li>四题各完成一次，首页色块变绿；完成轮数越多，绿色越深。</li>
+      <li>点击漂浮灯泡查看范答；拖选范答文字即可高亮，点击高亮片段可取消。</li>
+    </ol>
+    <p class="dialog-note">训练次数仅保存在当前浏览器。录音只在当前页面临时回放，不会上传。</p>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
