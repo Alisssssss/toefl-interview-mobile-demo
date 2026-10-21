@@ -380,7 +380,7 @@ button { color: inherit; }
   overflow: hidden;
   border: 1px solid var(--ink);
   border-radius: 5px;
-  background: #fff7c8;
+  background: #ffffff;
   box-shadow: 4px 4px 0 rgba(23,34,29,.2);
   animation: answerReveal .3s cubic-bezier(.2,.8,.2,1) both;
   touch-action: pan-y;
@@ -441,7 +441,7 @@ button { color: inherit; }
   padding: .04em .08em;
   margin: 0 -.01em;
   border-radius: 2px;
-  background: linear-gradient(180deg, transparent 23%, #ffc85a 23%, #ffc85a 91%, transparent 91%);
+  background: linear-gradient(180deg, transparent 23%, #b9e77f 23%, #b9e77f 91%, transparent 91%);
   color: inherit;
   cursor: pointer;
   -webkit-box-decoration-break: clone;
